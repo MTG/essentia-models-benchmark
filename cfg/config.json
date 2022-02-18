@@ -1,0 +1,8 @@
+{
+    "models_base": "/home/palonso/models/essentia-models",
+    "benchmark_name": "benchmark",
+    "audio_duration": 10,
+    "repetitions": 10,
+    "platform": "gpu",
+    "gpu_id": 0
+}

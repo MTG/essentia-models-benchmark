@@ -1,0 +1,33 @@
+[
+    {
+        "name": "MusiCNN",
+        "class": "algoTensorflowPredictMusiCNN",
+        "kwargs": {
+            "graphFilename": "autotagging/msd/msd-musicnn-1.pb"
+        }
+    },
+    {
+        "name": "VGGish",
+        "class": "algoTensorflowPredictVGGish",
+        "kwargs": {
+            "graphFilename": "feature-extractors/vggish/audioset-vggish-3.pb",
+            "output": "model/vggish/embeddings"
+        }
+    },
+    {
+        "name": "YAMNet",
+        "class": "algoTensorflowPredictVGGish",
+        "kwargs": {
+            "graphFilename": "audio-event-recognition/yamnet/audioset-yamnet-1.pb",
+            "input": "melspectrogram",
+            "output": "activations"
+        }
+    },
+    {
+        "name": "EffnetDiscogs",
+        "class": "algoTensorflowPredictEffnetDiscogs",
+        "kwargs": {
+            "graphFilename": "music-style-classification/effnetdiscogs/discogs-effnet-bs64-1.pb"
+        }
+    }
+]
